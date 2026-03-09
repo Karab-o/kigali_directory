@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "704702761161",
+    "project_id": "indivassign2",
+    "storage_bucket": "indivassign2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704702761161:android:00a26d0c2c2ca49769a518",
+        "android_client_info": {
+          "package_name": "com.example.individual_assignment2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUNkgS23rTo-pi5-_6TVDqsEDrQAVfQi4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
