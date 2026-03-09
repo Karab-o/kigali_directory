@@ -1,33 +1,28 @@
-# Kigali Directory 📍
+# Kigali Directory 
 
-Hey there! Welcome to the Kigali Directory - your personal guide to discovering amazing places around Kigali, Rwanda. This Flutter app helps you find, share, and manage information about local spots, from cozy cafés to essential services.
+Hello, Welcome to the Kigali Directory - your personal guide to find amazing places around Kigali, Rwanda. This Flutter app helps you find, share, and manage information about local spots.
 
-Built with love and Firebase, this app lets you contribute to the community by adding your favorite places and discovering hidden gems recommended by others. It's like having a local friend who knows all the best spots! 🌟
+###  Core Features
+- ** Interactive Maps**: See exactly where places are located with Google Maps integration
+- ** Secure Sign-up**: Create an account with email verification to keep things safe
+- ** Share Your Spots**: Add new places you've discovered to help others find them
+- ** Update Your Listings**: Made a mistake? No problem! Edit your listings anytime
+- ** Remove Listings**: Clean up your contributions when needed
+- ** Rate & Review**: Share your experiences with 5-star ratings and written reviews
+- ** Save Favorites**: Bookmark places you love for quick access later
 
-## ✨ What Makes This App Special
+###  User Experience
+- ** Smart Search**: Find places by name, address, or browse by category
+- ** Beautiful Dark Theme**: Easy on the eyes, perfect for night browsing
+- ** Live Updates**: See new places and reviews appear in real-time
+- ** Organized Categories**: Everything neatly sorted for easy browsing
 
-### 🎯 Core Features
-- **🗺️ Interactive Maps**: See exactly where places are located with Google Maps integration
-- **� Secure Sign-up**: Create an account with email verification to keep things safe
-- **➕ Share Your Spots**: Add new places you've discovered to help others find them
-- **✏️ Update Your Listings**: Made a mistake? No problem! Edit your listings anytime
-- **🗑️ Remove Listings**: Clean up your contributions when needed
-- **⭐ Rate & Review**: Share your experiences with 5-star ratings and written reviews
-- **🔖 Save Favorites**: Bookmark places you love for quick access later
-
-### 🎨 User Experience
-- **🔍 Smart Search**: Find places by name, address, or browse by category
-- **� Beautiful Dark Theme**: Easy on the eyes, perfect for night browsing
-- **⚡ Live Updates**: See new places and reviews appear in real-time
-- **📂 Organized Categories**: Everything neatly sorted for easy browsing
-
-## 🛠️ Tech Stack
+## Tech
 
 ### Frontend
 - **Flutter 3.0+** - Cross-platform mobile framework
 - **Provider** - State management
 - **Google Maps Flutter** - Interactive mapping
-- **URL Launcher** - Navigation and external links
 - **Geolocator** - Location services
 
 ### Backend
@@ -127,7 +122,7 @@ lib/
     └── shared_widgets.dart
 ```
 
-## 🔧 Configuration
+##  Configuration
 
 ### Firebase Configuration
 1. Update `firebase_options.dart` with your Firebase project settings
@@ -139,40 +134,17 @@ lib/
    - Android: `android/app/src/main/AndroidManifest.xml`
    - iOS: `ios/Runner/AppDelegate.swift`
 
-### 🏷️ Categories You'll Find
-- **☕ Café** - Your morning coffee fix
-- **🏥 Hospital** - Healthcare facilities  
-- **💊 Pharmacy** - Medical supplies and prescriptions
-- **👮 Police Station** - Safety and security services
-- **📚 Library** - Quiet study and reading spaces
-- **🍽️ Restaurant** - Local dining spots
-- **🌳 Park** - Green spaces for relaxation
-- **📸 Tourist Attraction** - Must-visit local landmarks
-- **🏢 Utility Office** - Essential city services
+###  Categories You'll Find
+- ** Café** - Your morning coffee fix
+- ** Hospital** - Healthcare facilities  
+- ** Pharmacy** - Medical supplies and prescriptions
+- ** Police Station** - Safety and security services
+- ** Library** - Quiet study and reading spaces
+- ** Restaurant** - Local dining spots
+- ** Park** - Green spaces for relaxation
+- ** Utility Office** - Essential city services
 
-Each category comes with its own icon to make browsing even easier! 🎨
-
-## �️ Need Help? Let's Fix It!
-
-### 😕 "I added a listing but it says 'No listings yet'!"
-This is the most common issue! Here's what's happening:
-- **The Problem**: Firebase needs a special index to sort your listings properly
-- **Quick Fix**: Click the link in the error message (it takes you right to Firebase Console)
-- **Manual Fix**: Go to Firebase Console → Firestore Database → Indexes and create an index for:
-  - Collection: `listings`
-  - Fields: `createdBy` (Ascending) + `timestamp` (Descending)
-
-### 🔐 "Can't sign up or sign in!"
-- **Check your Firebase setup**: Make sure Authentication is enabled in Firebase Console
-- **Email verification**: Users need to verify their email before accessing the app
-- **Configuration**: Double-check that `firebase_options.dart` matches your project
-
-### 🗺️ "Maps aren't showing up!"
-- **API Key**: Make sure your Google Maps API key is properly configured
-- **Platform setup**: Add the key to both Android and iOS configuration files
-- **Enable APIs**: Ensure Maps SDK is enabled in Google Cloud Console
-
-### 🚀 "Build failed with errors!"
+###  In case it's not working
 - **Clean slate**: Try `flutter clean` then `flutter pub get`
 - **Flutter version**: Make sure you're using Flutter 3.0 or newer
 - **Dependencies**: All packages should play nicely together
