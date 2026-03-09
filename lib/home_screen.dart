@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Keep "My Listings" in sync with the currently authenticated user.
+    
     final auth = context.watch<AuthProvider>();
     context
         .read<ListingsProvider>()

@@ -35,7 +35,7 @@ class KigaliDirectoryApp extends StatelessWidget {
   }
 }
 
-/// Listens to AuthProvider status and routes to the correct screen.
+
 class AuthWrapper extends StatelessWidget {
   const AuthWrapper({super.key});
 

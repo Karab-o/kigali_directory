@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../theme.dart';
 import '../models/listing_model.dart';
 
-// ─── Star Rating Display ────────────────────────────────────────────────────
+
 
 class StarRating extends StatelessWidget {
   final double rating;
@@ -30,7 +30,6 @@ class StarRating extends StatelessWidget {
   }
 }
 
-// ─── Category Filter Bar ─────────────────────────────────────────────────────
 
 class CategoryFilterBar extends StatelessWidget {
   final List<String> categories;
@@ -87,7 +86,6 @@ class CategoryFilterBar extends StatelessWidget {
   }
 }
 
-// ─── Listing Card (Directory list row) ───────────────────────────────────────
 
 class ListingCard extends StatelessWidget {
   final ListingModel listing;
@@ -114,7 +112,7 @@ class ListingCard extends StatelessWidget {
         ),
         child: Row(
           children: [
-            // Category icon circle
+           
             Container(
               width: 46,
               height: 46,
@@ -129,7 +127,7 @@ class ListingCard extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 12),
-            // Name, rating, distance
+           
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -161,7 +159,7 @@ class ListingCard extends StatelessWidget {
                 ],
               ),
             ),
-            // Distance (simulated)
+           
             if (showDistance)
               Text(
                 '${(listing.id.hashCode % 25 + 1) * 0.1 + 0.1}  km',
@@ -183,7 +181,6 @@ class ListingCard extends StatelessWidget {
   }
 }
 
-// ─── Section Header ──────────────────────────────────────────────────────────
 
 class SectionHeader extends StatelessWidget {
   final String title;
@@ -226,7 +223,7 @@ class SectionHeader extends StatelessWidget {
   }
 }
 
-// ─── Empty State Widget ──────────────────────────────────────────────────────
+
 
 class EmptyState extends StatelessWidget {
   final IconData icon;

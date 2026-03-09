@@ -24,7 +24,7 @@ class _BookmarksScreenState extends State<BookmarksScreen> {
       appBar: AppBar(
         title: const Text('Bookmarks'),
         actions: [
-          // Bookmarks toggle (matching last screenshot)
+          
           Padding(
             padding: const EdgeInsets.only(right: 16),
             child: Row(

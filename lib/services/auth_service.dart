@@ -9,7 +9,7 @@ class AuthService {
   Stream<User?> get authStateChanges => _auth.authStateChanges();
   User? get currentUser => _auth.currentUser;
 
-  /// Sign up with email + password. Returns error string or null on success.
+  
   Future<String?> signUp(String email, String password, String name) async {
     try {
       final cred = await _auth.createUserWithEmailAndPassword(
@@ -18,7 +18,7 @@ class AuthService {
       );
       await cred.user!.sendEmailVerification();
       await cred.user!.updateDisplayName(name.trim());
-      // Save profile to Firestore users collection (required for backend integration)
+     
       final user = UserModel(
         uid: cred.user!.uid,
         email: email.trim(),
@@ -30,10 +30,10 @@ class AuthService {
     } on FirebaseAuthException catch (e) {
       return _friendlyAuthError(e.code, e.message);
     } on FirebaseException catch (e) {
-      // Firestore or other Firebase errors (e.g. permission denied)
+      
       return 'Firebase error: ${e.message ?? e.code}. Check Firestore rules.';
     } catch (e) {
-      // Network, platform, or unknown errors – show message so you can debug
+      
       final msg = e.toString();
       if (msg.contains('SocketException') || msg.contains('network')) {
         return 'No internet connection. Check your network and try again.';
@@ -42,7 +42,7 @@ class AuthService {
     }
   }
 
-  /// Log in. Returns error string or null on success.
+  
   Future<String?> logIn(String email, String password) async {
     try {
       await _auth.signInWithEmailAndPassword(
@@ -65,10 +65,10 @@ class AuthService {
 
   Future<void> logOut() => _auth.signOut();
 
-  /// Reload user to refresh emailVerified flag.
+  
   Future<void> reloadUser() async => _auth.currentUser?.reload();
 
-  /// Resend verification email to current user. Returns error message or null on success.
+  
   Future<String?> sendVerificationEmail() async {
     final user = _auth.currentUser;
     if (user == null) return 'No user signed in.';
@@ -83,7 +83,7 @@ class AuthService {
     }
   }
 
-  /// Fetch user profile doc from Firestore.
+  
   Future<Map<String, dynamic>?> getUserProfile(String uid) async {
     final doc = await _db.collection('users').doc(uid).get();
     return doc.data();

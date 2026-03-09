@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  // Colors from the screenshots
+  
   static const Color navyDark = Color(0xFF0D1B2A); // deepest background
   static const Color navyMid = Color(0xFF1A2B3C); // card background
   static const Color navyLight = Color(0xFF243447); // elevated surfaces
   static const Color accent = Color(0xFFFFB800); // yellow/gold — stars, buttons
   static const Color accentOrange = Color(
     0xFFFF8C00,
-  ); // "Rate this service" button
+  ); 
   static const Color textPrimary = Color(0xFFFFFFFF);
   static const Color textSecondary = Color(0xFFAABBCC);
   static const Color chipBg = Color(0xFF1E3048);
@@ -82,7 +82,7 @@ class AppTheme {
       );
 }
 
-// Categories list — shared across the app
+
 const List<String> kCategories = [
   'All',
   'Café',
@@ -96,7 +96,7 @@ const List<String> kCategories = [
   'Utility Office',
 ];
 
-// Category icons map
+
 const Map<String, IconData> kCategoryIcons = {
   'All': Icons.apps,
   'Café': Icons.coffee,

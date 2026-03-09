@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               const SizedBox(height: 60),
 
-              // Logo / Title
+             
               const Icon(Icons.location_city, size: 56, color: AppTheme.accent),
               const SizedBox(height: 16),
               const Text(
@@ -63,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
               const SizedBox(height: 48),
 
-              // Email field
+             
               _buildLabel('Email'),
               const SizedBox(height: 6),
               TextField(
@@ -81,7 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               const SizedBox(height: 16),
 
-              // Password field
+             
               _buildLabel('Password'),
               const SizedBox(height: 6),
               TextField(
@@ -129,7 +129,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
               const SizedBox(height: 28),
 
-              // Login button
+            
               SizedBox(
                 height: 52,
                 child: ElevatedButton(
@@ -157,7 +157,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
               const SizedBox(height: 20),
 
-              // Sign up link
+             
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

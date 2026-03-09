@@ -21,7 +21,7 @@ class DirectoryScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // ── App Bar ──────────────────────────────────────────────
+            
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
               child: Row(
@@ -74,7 +74,7 @@ class DirectoryScreen extends StatelessWidget {
 
             const SizedBox(height: 16),
 
-            // ── Category Chips ────────────────────────────────────────
+            
             CategoryFilterBar(
               categories: kCategories,
               selected: listings.category,
@@ -84,7 +84,7 @@ class DirectoryScreen extends StatelessWidget {
 
             const SizedBox(height: 12),
 
-            // ── Search Bar ───────────────────────────────────────────
+            
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: TextField(
@@ -111,7 +111,7 @@ class DirectoryScreen extends StatelessWidget {
 
             const SizedBox(height: 16),
 
-            // ── Listings ─────────────────────────────────────────────
+            
             Expanded(
               child: listings.isLoading
                   ? const Center(
@@ -133,7 +133,7 @@ class DirectoryScreen extends StatelessWidget {
                               ),
                             ),
 
-                            // Listing rows
+                            
                             SliverList(
                               delegate: SliverChildBuilderDelegate((ctx, i) {
                                 final l = listings.filtered[i];

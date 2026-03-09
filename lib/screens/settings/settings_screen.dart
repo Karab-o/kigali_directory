@@ -27,7 +27,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       appBar: AppBar(title: const Text('Settings')),
       body: ListView(
         children: [
-          // ── Profile Card ──────────────────────────────────────────
+          
           Container(
             margin: const EdgeInsets.all(16),
             padding: const EdgeInsets.all(20),
@@ -110,7 +110,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
           ),
 
-          // ── Notifications ─────────────────────────────────────────
+          
           _sectionHeader('Notifications'),
           _switchTile(
             'Location Notifications',
@@ -134,13 +134,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
             (v) => setState(() => _reviewNotifications = v),
           ),
 
-          // ── About ─────────────────────────────────────────────────
+          
           _sectionHeader('About'),
           _infoTile(Icons.info_outline, 'App Version', '1.0.0'),
           _infoTile(Icons.location_city, 'City', 'Kigali, Rwanda'),
           _infoTile(Icons.storage_outlined, 'Database', 'Firebase Firestore'),
 
-          // ── Account ───────────────────────────────────────────────
+          
           _sectionHeader('Account'),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
